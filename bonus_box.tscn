@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwblnx5tgsvai"]
+
+[ext_resource type="Script" uid="uid://bf7lgtufvwtup" path="res://scripts/bonus_box.gd" id="1_jlwa0"]
+[ext_resource type="Texture2D" uid="uid://bddfqg83kl1xl" path="res://tiles/box.png" id="1_v3kyq"]
+[ext_resource type="PackedScene" uid="uid://0sxcij4b6xig" path="res://bone_popup.tscn" id="2_rxv56"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3kyq"]
+size = Vector2(23, 23)
+
+[node name="BonusBox" type="StaticBody2D"]
+script = ExtResource("1_jlwa0")
+bone_scene = ExtResource("2_rxv56")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11, 14.5)
+scale = Vector2(1.34375, 1.45313)
+texture = ExtResource("1_v3kyq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, 15)
+shape = SubResource("RectangleShape2D_v3kyq")

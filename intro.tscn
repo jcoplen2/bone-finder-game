@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgkgsrwvng544"]
+
+[ext_resource type="Script" uid="uid://bb71js0wtsjy2" path="res://intro.gd" id="1_s2ta7"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2ta7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0253638, 0.0253638, 0.0253638, 1)
+
+[node name="StoryLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -445.0
+offset_top = 69.0
+offset_right = 439.0
+offset_bottom = 352.0
+grow_horizontal = 2
+text = "Your dog has been down in the dumps recently. 
+
+It is probably due to you going back into the office and no longer spending all day hanging out with them. 
+
+Or it could be that new cat you brought into the house.
+
+Either way they have been acting super depressed lately and could really use a special treat to perk them back up. 
+
+See if you can find some of their favorite bones on your way home from work.
+
+They wanted me to tell you to watch out for those creepy cats!"
+
+[node name="StartHint" type="Label" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 439.0
+offset_right = 604.0
+offset_bottom = 462.0
+text = "Press Enter to Start"

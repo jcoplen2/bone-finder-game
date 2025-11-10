@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccenbvogglb5j"]
+
+[ext_resource type="Script" uid="uid://ca24ekrpal87" path="res://scripts/enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://bcntheg4dd41o" path="res://tiles/cat.png" id="1_7k104"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
+size = Vector2(36.5, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k104"]
+size = Vector2(40, 11)
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(145, 7)
+texture = ExtResource("1_7k104")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(138, 5)
+shape = SubResource("RectangleShape2D_4gyqm")
+
+[node name="StompArea" type="Area2D" parent="."]
+position = Vector2(112, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea"]
+position = Vector2(26, -14)
+shape = SubResource("RectangleShape2D_7k104")
+
+[connection signal="body_entered" from="StompArea" to="." method="_on_stomp_area_body_entered"]
