@@ -24,10 +24,8 @@ func _physics_process(delta: float) -> void:
 	velocity.x = SPEED * dir
 	move_and_slide()
 
-	# cooldown tick
 	flip_cd = max(flip_cd - delta, 0.0)
 
-	# flip if we hit a wall (horizontal collision normal)
 	if flip_cd == 0.0:
 		for i in get_slide_collision_count():
 			var n := get_slide_collision(i).get_normal()
@@ -35,11 +33,9 @@ func _physics_process(delta: float) -> void:
 				dir *= -1
 				sprite.flip_h = dir > 0
 				flip_cd = 0.25
-				# nudge away from the wall
 				global_position.x += -n.x * 2.0
 				break
 
-	# limit range around spawn
 	if dir == 1 and global_position.x > start_x + roam_distance:
 		dir = -1
 		sprite.flip_h = dir > 0

@@ -5,7 +5,7 @@ const JUMP_VELOCITY := -350.0
 const GRAVITY := 500.0
 
 @export var lives := 3
-@export var invuln_time := 1.0   # brief grace period after getting hit
+@export var invuln_time := 1.0  
 
 var invuln := 0.0
 var spawn_pos := Vector2.ZERO
@@ -35,8 +35,6 @@ func _physics_process(delta: float) -> void:
 	_check_enemy_collision()
 	_check_box_hit()
 
-
-
 func _check_enemy_collision() -> void:
 	if invuln > 0.0:
 		return
@@ -46,8 +44,6 @@ func _check_enemy_collision() -> void:
 		var collider := collision.get_collider()
 		if collider != null and collider.is_in_group("enemy"):
 			var n := collision.get_normal()
-			# n.y is about -1 when you're on top (stomping)
-			# only take damage if it's NOT a stomp
 			if n.y > -0.5:
 				take_hit()
 				break
@@ -64,16 +60,12 @@ func _check_box_hit() -> void:
 				velocity.y = 0.0
 				break
 
-
-
-
 func take_hit() -> void:
 	if invuln > 0.0:
 		return
 
 	lives -= 1
 
-	# update UI lives
 	if ui:
 		ui.lose_life(1)
 

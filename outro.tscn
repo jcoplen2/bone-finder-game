@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dqen11aw81b7o"]
 
-[ext_resource type="Script" uid="uid://btio7bc1qdy70" path="res://outro.gd" id="1_d2ofq"]
+[ext_resource type="Script" uid="uid://btio7bc1qdy70" path="res://scripts/outro.gd" id="1_d2ofq"]
 
 [node name="Outro" type="Control"]
 layout_mode = 3

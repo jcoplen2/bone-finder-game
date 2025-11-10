@@ -3,7 +3,6 @@ extends Control
 func _ready() -> void:
 	var bones := Global.score
 
-	# hide both to start
 	$WinLabel.visible = false
 	$LoseLabel.visible = false
 

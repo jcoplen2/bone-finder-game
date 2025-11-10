@@ -13,7 +13,6 @@ func hit_from_below() -> void:
 	used = true
 	
 	print("BOX HIT!")
-	# spawn a bone popup
 	if bone_scene:
 		var bone := bone_scene.instantiate()
 		bone.global_position = global_position

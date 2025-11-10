@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://b0dkkqg5dod3t" path="res://scripts/ui.gd" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://ccenbvogglb5j" path="res://enemy.tscn" id="8_bjebc"]
 [ext_resource type="PackedScene" uid="uid://bwblnx5tgsvai" path="res://bonus_box.tscn" id="9_5rr72"]
-[ext_resource type="Script" uid="uid://dx7ojvl0fd5op" path="res://goal.gd" id="10_gyffv"]
+[ext_resource type="Script" uid="uid://dx7ojvl0fd5op" path="res://scripts/goal.gd" id="10_gyffv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rka8t"]
 size = Vector2(11.5, 9)
